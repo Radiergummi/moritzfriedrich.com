@@ -14,6 +14,12 @@ jobs:
         uses: actions/checkout@v1
         with:
           submodules: true
+          
+      - name: Install yarn modules
+        uses: Borales/actions-yarn@v2.1.0
+        with:
+          cmd: install
+
 
       - name: Publish Site
         uses: chabad360/hugo-gh-pages@master
