@@ -6,10 +6,9 @@ title                    = "Moritz Friedrich"
 theme                    = "sam"
 pygmentsStyle            = "monokai"                                             # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
-# googleAnalytics        = ""                                                    # Tracking code, eg. "UA-111111111-1"
 
 [params]
-    dateform             = "Mon Jan 02, 2006"
+    dateform             = "Monday, 02. January 2006"
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "home"                                                # What to call the home page link
@@ -20,17 +19,35 @@ pygmentsCodefences       = true
     images               = ["tn.png"]                                            # Image that shows on Twitter cards and Open Graph links to the site
     title                = "moritz friedrich"
 
-[[params.mainMenu]]
-    link = "/posts"
-    text = "posts"
+# Currently I don't use Analytics at all. I wanted to, but let's face it - I don't look into
+# the statistics anyway. All the hassle the GDPR causes to use Analytics is not worth the
+# trouble, so I'll probably leave it at that.
+#
+# googleAnalytics          = "" # Tracking code, eg. "UA-111111111-1"
+#
+# [privacy]
+#    [privacy.googleAnalytics]
+#        anonymizeIP = true
+#        respectDoNotTrack = true
+#        useSessionStorage = true
 
 [[params.mainMenu]]
-    link = "/portfolio"
-    text = "portfolio"
+    link        = "/posts"
+    text        = "blog"
 
 [[params.mainMenu]]
-    link = "/about"
-    text = "who is moritz?"
+    link        = "https://github.com/Radiergummi"
+    text        = "github"
+
+[[params.mainMenu]]
+    link        = "https://stackoverflow.com/users/2532203"
+    text        = "stack overflow"
+    hidden      = true
+
+[[params.mainMenu]]
+    link        = "/about"
+    text        = "who is moritz friedrich?"
+    footerText  = "about"
 
 [imaging]
     quality = 75
