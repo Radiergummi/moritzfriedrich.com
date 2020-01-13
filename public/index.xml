@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Moritz Friedrich</title>
+    <link>https://www.moritzfriedrich.com/</link>
+    <description>Recent content in Home on Moritz Friedrich</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jan 2020 20:43:19 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.moritzfriedrich.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First</title>
+      <link>https://www.moritzfriedrich.com/posts/first/</link>
+      <pubDate>Mon, 13 Jan 2020 20:54:44 +0100</pubDate>
+      
+      <guid>https://www.moritzfriedrich.com/posts/first/</guid>
+      <description>first post!</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://www.moritzfriedrich.com/about/</link>
+      <pubDate>Mon, 13 Jan 2020 20:39:42 +0100</pubDate>
+      
+      <guid>https://www.moritzfriedrich.com/about/</guid>
+      <description>Hello world</description>
+    </item>
+    
+  </channel>
+</rss>
