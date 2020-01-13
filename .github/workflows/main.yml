@@ -15,7 +15,7 @@ jobs:
         with:
           submodules: true
           
-      - name: Install yarn modules
+      - name: Install Yarn Modules
         uses: Borales/actions-yarn@v2.1.0
         with:
           cmd: install
@@ -30,3 +30,9 @@ jobs:
           repo: Radiergummi/radiergummi.github.io
           hugoVersion: extended_0.62.2
           args: --gc --minify
+
+      - name: Purge Cloudflare Cache
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
