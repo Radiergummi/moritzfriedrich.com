@@ -161,7 +161,7 @@ hr {
   #content .highlight {
     width: 100%; }
   #content pre {
-    line-height: 2rem;
+    line-height: 1.4;
     border-radius: 3px;
     padding: 1rem;
     overflow-x: auto;
@@ -169,13 +169,18 @@ hr {
     width: 100%;
     margin-bottom: 1em; }
   #content pre > code {
-    border: none; }
+    background: none;
+    opacity: 1; }
   #content code {
     font-size: 0.9rem;
-    font-family: 'Fira Code', 'Source Code Pro', monospace;
-    padding: 0.1rem;
+    font-family: "Fira Code","SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
+    font-feature-settings: "calt" 1;
+    font-variant-ligatures: contextual;
+    letter-spacing: 0.5px;
+    padding: 0.1rem 0.25rem;
     border-radius: 3px;
-    border: 1px solid #cccccc; }
+    background: rgba(17, 17, 17, 0.4);
+    opacity: 0.8; }
   #content img {
     width: 100%;
     max-width: 100%;

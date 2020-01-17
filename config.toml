@@ -16,7 +16,7 @@ pygmentsCodefences       = true
 
 # Metadata for Open Graph and Twitter
     description          = "moritz friedrich, yet another full-stack developer." # Max 160 characters show in search results
-    images               = ["tn.png"]                                            # Image that shows on Twitter cards and Open Graph links to the site
+    images               = ["hero.png"]                                          # Image that shows on Twitter cards and Open Graph links to the site
     title                = "moritz friedrich"
 
 # Currently I don't use Analytics at all. I wanted to, but let's face it - I don't look into
