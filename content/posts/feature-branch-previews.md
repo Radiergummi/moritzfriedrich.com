@@ -58,3 +58,7 @@ solution should fulfill the following requirements:
 The solution I came up with fulfills these criteria with a number of clever/imbecile (your pick) tricks!
 
 ### Choosing a domain schema
+
+<!--
+https://gist.github.com/Radiergummi/bd7a7298a6d07e76912daa06a72707c5
+-->
