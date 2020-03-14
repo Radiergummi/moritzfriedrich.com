@@ -1,7 +1,7 @@
 ---
 title: "Automatically deployed feature branch previews"
 slug: "feature-branch-previews"
-date: 2020-01-13T20:54:44+01:00
+date: 2020-03-14T13:12:20+01:00
 showDate: true
 draft: false
 tags: ["blog","story"]
