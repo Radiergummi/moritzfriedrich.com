@@ -1,5 +1,5 @@
 ---
-title: "Taking user feedback-seriously"
+title: "Taking user feedback seriously"
 slug: "user-feedback"
 date: 2020-06-20T12:03:35+02:00
 showDate: true
