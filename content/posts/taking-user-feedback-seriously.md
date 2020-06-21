@@ -3,8 +3,8 @@ title: "Taking user feedback-seriously"
 slug: "user-feedback"
 date: 2020-06-20T12:03:35+02:00
 showDate: true
-draft: true
-tags: ["blog","story"]
+draft: false
+tags: ["blog", "story"]
 ---
 
 Recently, I got annoyed with the way we handle support in some cases. Users write emails or send messages via instant messaging apps, which end up in some ticket
@@ -35,5 +35,73 @@ now?"_. We'll get to each of those points. I'd just like to detail the implement
 The form itself is designed to reduce friction as much as possible: It consists of a message field (a text area without any length restrictions) and an optional,
 five-star rating field you know from online shops. The meta-data, like user and customer name, contact information and current application state are transparently
 gathered in the background.  
+
+```
+ ┌──────────────────────────────────────────────────────────┐
+ │   email address                    your optional rating  │
+ │ ┌───────────────────────────────┐                        │
+ │ │ prefilled@user-name.tld       │  ★★★☆☆              │
+ │ └───────────────────────────────┘                        │
+ │                                                          │
+ │   how can we help?                                       │
+ │ ┌──────────────────────────────────────────────────────┐ │
+ │ │                                                      │ │
+ │ │                                                      │ │
+ │ │                                                      │ │
+ │ │                                                      │ │
+ │ └──────────────────────────────────────────────────────┘ │
+ │ ┏━━━━━━━━━━┓                                             │
+ │ ┃  Submit  ┃                            p͟r͟i͟v͟a͟c͟y͟ ͟p͟o͟l͟i͟c͟y   │
+ │ ┗━━━━━━━━━━┛                                             │
+ └──────────────────────────────────────────────────────────┘
+```
+
 As the user submits the message, it will be augmented with the application state and `POST`ed to the server. As the backend picks the message up, it again augments
-it with information I'm not comfortable settable by the user: The user and customer identification details, the application the feedback was created for
+it with information I'm not comfortable settable by the user: The user and customer identification details, the application the feedback was created for and 
+so on.  
+We end up with an object like the following:
+```json
+{
+    "message": "This is a test message.  \nIt can even contain _Markdown_!",
+    "rating": 4,
+    "user": "moritz@messengerpeople.dev",
+    "customer": 293572,
+    "repository": "app-name",
+    "version": "ae124b2",
+    "state": { ... }
+}
+```
+
+This object is subsequently sent to a special `feedback` exchange on our RabbitMQ cluster and routed to a specialized monitoring worker. The worker, essentially, 
+checks whether it has an entry for the given repository name in its allow list, then creates an issue on the repository using GitHub API!  
+The worker itself is project agnostic: It treats all feedback messages the same way, rendering a structured issue text and adds labels as appropriate:
+
+```
+User Feedback #3
+[Open]  @monitoring-bot opened this issue 17 minutes ago · 0 comments
+
+This is a test message.  
+It can even contain _Markdown_!
+
+-----------------------------------------------------------
+
+Overall rating: 4/5
+Submitted by:   [moritz@messengerpeople.dev](mailto:moritz@messengerpeople.dev)
+Customer:       [#293572](https://link.to.crm/customers/293572)
+Version:        [#ae124b2](https://github.com/org/repo/commit/ae124b2...)
+
+@monitoring-bot added labels: [automatically-generated] 
+                              [unverified]
+                              [feedback]
+                              [user:moritz@messengerpeople.dev]
+                              [customer:293572]
+```
+
+As you can imagine, the labels allow to sort and filter feedback pretty efficiently - or hide it alltogether. Usually, when an issue is being worked on, the
+`unverified` label is removed and a priority or other internal labels assigned instead. 
+
+Summing up: This workflow basically allows customers to open an issue in our (private) GitHub projects. As a software company, this brings all customer feedback
+directly where developers are: Issues on GitHub. This allows for much deeper integration than most external issue trackers (excluding Jira, maybe). Issues can be
+solved with commits, linked to other open issues, discussed internally and refer to clear revisions of the source code. All of this reduces the fricition and helps
+keeping customers and developers connected, as human beings. Support folks stay in the loop, see code changes and related discussion, and can ultimately connect 
+back to the customer.
