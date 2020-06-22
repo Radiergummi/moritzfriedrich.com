@@ -1,6 +1,6 @@
 {{ .Site.Params.footerText | markdownify }}
 
-<script data-goatcounter="https://stats.9dev.de/count" async src="https://stats.9dev.de/count.js"></script>
+{{ partial "analytics.html" . }}
 
 {{/* Empty script tag as chrome bug fix, see https://stackoverflow.com/a/42969608/943337 */}}
 <script> </script>
