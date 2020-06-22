@@ -10,8 +10,8 @@
             {{ if .Site.Params.mainMenu }}
                 {{ range .Site.Params.mainMenu }}
                     <div class="big-link">
-                        <a href="{{.link}}">
-                            {{.text}}
+                        <a href="{{ .link }}">
+                            {{ .text }}
                         </a>
                     </div>
                 {{ end }}
@@ -19,14 +19,16 @@
             {{ else }}
                 {{ range .Site.Sections }}
                     <div class="big-link"> 
-                        <a href="{{.Permalink}}">
-                            {{.Title}}
+                        <a href="{{ .Permalink }}">
+                            {{ .Title }}
                         </a>
                     </div>
                 {{ end }}
             {{ end }}
             
         </div>
+        {{ partial "analytics.html" . }}
+        
         {{/* Empty script tag as chrome bug fix, see https://stackoverflow.com/a/42969608/943337 */}}
         <script> </script>
     </body>
