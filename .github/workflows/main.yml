@@ -28,7 +28,7 @@ jobs:
           cname: www.moritzfriedrich.com
           branch: master
           repo: Radiergummi/radiergummi.github.io
-          hugoVersion: extended_0.62.2
+          hugoVersion: extended_0.73.0
           args: --gc --minify
 
       - name: Purge Cloudflare Cache
