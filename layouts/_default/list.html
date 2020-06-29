@@ -1,0 +1,18 @@
+{{ define "section_content" }}
+    <main class="section" id="content">
+        {{ .Content }}
+        <ul class="posts">
+            {{ range .Data.Pages }}
+                <li>
+                    {{ if .Params.showDate }}
+                        <time datetime="{{ .Date.Format ("2006-01-02T15:04:05-0700") }}">{{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }}</time>
+                        <span>&thinsp;·&thinsp;</span>
+                    {{ end }}
+                    <a href="{{ .Permalink }}">
+                        {{- .Title -}}
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </main>
+{{ end }}

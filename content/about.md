@@ -13,4 +13,4 @@ of a Kubernetes setup with modern PHP (>=7.3), Composer packages everywhere and 
 
 Aside from PHP I also work on the frontend side of things, albeit honestly, I prefer the PHP ecosystem. For GUI projects, I'm usually working with Vue(x).
 
-If you need more info, please refer to my [Developer Story](https://stackoverflow.com/users/story/2532203) on Stack Overflow.
+If you need more info, please refer to my [CV](/cv/) or [Developer Story](https://stackoverflow.com/users/story/2532203) on Stack Overflow.

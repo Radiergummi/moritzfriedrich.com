@@ -1,0 +1,26 @@
+{{ define "section_title" }}
+    <div class="page-header" id="title">
+        <span>Things tagged</span>
+        <span class="tags__tag">{{ .Title }}</span>
+    </div>
+{{ end }}
+
+{{ define "section_content" }}
+<div class="section" id="content">
+    {{ .Content }}
+    <ul>
+        {{ range .Data.Pages }}
+        <li>
+            {{ if .Params.showDate }}
+
+            {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
+
+            {{ end }}
+            <a href="{{.Permalink}}">
+                {{.Title}}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

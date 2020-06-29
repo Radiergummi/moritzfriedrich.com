@@ -1,0 +1,21 @@
+.page-header {
+  display:         flex;
+  justify-content: center;
+  align-items:     flex-start;
+  flex-direction:  row;
+  margin-top:      3rem;
+  margin-bottom:   2rem;
+
+  & .tags__tag {
+    margin-left: 0.5rem;
+  }
+
+  & .page-title {
+    font-family: var(--font-family-headings);
+    font-size:   2rem;
+    color:       RGB(var(--color-white));
+    line-height: 3rem;
+    margin:      0;
+    opacity:     1;
+  }
+}

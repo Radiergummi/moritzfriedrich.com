@@ -1,0 +1,24 @@
+@import '../mixins';
+
+.home {
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     flex-start;
+  margin:          auto 0;
+  width:           90%;
+  height:          100vh;
+  overflow:        hidden;
+
+  @include lg {
+    width: 45%;
+  }
+}
+
+.home__link {
+  font-family:   var(--font-family-headings);
+  font-size:     3rem;
+  font-weight:   300;
+  margin-bottom: 2rem;
+  line-height:   1.5em;
+}

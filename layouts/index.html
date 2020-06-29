@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        {{ partial "head.html" . }}
-        <title>{{ .Title }}</title>
-    </head>
-    <body>
-        <div class="section" id="splash">
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+    <title>{{ .Title }}</title>
+</head>
+<body>
+<div class="home" id="splash">
+    {{ if .Site.Params.mainMenu }}
+        {{ range .Site.Params.mainMenu }}
+            <div class="home__link">
+                <a href="{{ .link }}">{{ .text }}</a>
+            </div>
+        {{ end }}
 
-            {{ if .Site.Params.mainMenu }}
-                {{ range .Site.Params.mainMenu }}
-                    <div class="big-link">
-                        <a href="{{ .link }}">
-                            {{ .text }}
-                        </a>
-                    </div>
-                {{ end }}
+    {{ else }}
+        {{ range .Site.Sections }}
+            <div class="home__link">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </div>
+        {{ end }}
+    {{ end }}
 
-            {{ else }}
-                {{ range .Site.Sections }}
-                    <div class="big-link"> 
-                        <a href="{{ .Permalink }}">
-                            {{ .Title }}
-                        </a>
-                    </div>
-                {{ end }}
-            {{ end }}
-            
-        </div>
-        {{ partial "analytics.html" . }}
-        
-        {{/* Empty script tag as chrome bug fix, see https://stackoverflow.com/a/42969608/943337 */}}
-        <script> </script>
-    </body>
+</div>
+{{ partial "analytics.html" . }}
+
+{{/* Empty script tag as chrome bug fix, see https://stackoverflow.com/a/42969608/943337 */}}
+<script></script>
+</body>
 </html>

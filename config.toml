@@ -4,8 +4,10 @@ defaultContentLanguage   = "en"
 isMultilingual           = false
 title                    = "Moritz Friedrich"
 theme                    = "sam"
-pygmentsStyle            = "monokai"                                             # https://help.farbox.com/pygments.html
+pygmentsStyle            = "native"                                             # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
+pygmentsUseClasses       = true
+pygmentsOptions = "startinline=1"
 
 [params]
     dateform             = "Monday, 02. January 2006"
@@ -14,22 +16,21 @@ pygmentsCodefences       = true
     homepage             = "home"                                                # What to call the home page link
     footerText           = ""
 
-# Metadata for Open Graph and Twitter
+    # Metadata for Open Graph and Twitter
     description          = "moritz friedrich, yet another full-stack developer." # Max 160 characters show in search results
     images               = ["hero.png"]                                          # Image that shows on Twitter cards and Open Graph links to the site
     title                = "moritz friedrich"
 
-# Currently I don't use Analytics at all. I wanted to, but let's face it - I don't look into
-# the statistics anyway. All the hassle the GDPR causes to use Analytics is not worth the
-# trouble, so I'll probably leave it at that.
-#
-# googleAnalytics          = "" # Tracking code, eg. "UA-111111111-1"
-#
-# [privacy]
-#    [privacy.googleAnalytics]
-#        anonymizeIP = true
-#        respectDoNotTrack = true
-#        useSessionStorage = true
+    # Social pages
+    instagramPage        = "radiergummi"
+    twitterPage          = "@mofriedrich"
+    githubPage           = "Radiergummi"
+
+    # Currently I don't use Analytics at all. I wanted to, but let's face it - I don't look into
+    # the statistics anyway. All the hassle the GDPR causes to use Analytics is not worth the
+    # trouble, so I'll probably leave it at that.
+    analyticsEndpoint    = "https://stats.9dev.de/count"
+    analyticsUrl         = "https://stats.9dev.de/count.js"
 
 [[params.mainMenu]]
     link        = "/posts"

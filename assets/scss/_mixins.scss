@@ -1,0 +1,5 @@
+@import 'mixins/screen';
+
+@mixin ease($time) {
+  transition: $time ease;
+}

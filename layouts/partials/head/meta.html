@@ -1,0 +1,102 @@
+{{/* Base tags */}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<meta name="HandheldFriendly" content="True">
+<meta name="msapplication-tap-highlight" content="no">
+
+{{/* Links and page URL */}}
+<base href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml">
+<meta name="url" content="{{ .Permalink }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{ with .OutputFormats.Get "RSS" -}}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">
+    <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}">
+{{- end -}}
+
+{{/* Site description */}}
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta itemprop="description" content="{{ .Site.Params.description }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta name="twitter:description" content="{{ .Site.Params.description }}">
+
+{{/* Language and Locale */}}
+<meta property="og:locale" content="{{ .Language.Lang }}">
+<meta name="language" content="{{ .Language.Lang }}">
+
+{{/* Site title */}}
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}">
+<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}">
+<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}">
+<meta property="og:site_name" content="{{ .Site.Params.siteName }}">
+
+{{/* Specific Social Media stuff */}}
+<meta name="twitter:site" content="{{ .Site.Params.twitter }}">
+<meta name="twitter:creator" content="{{ .Site.Params.twitter }}">
+<meta property="fb:app_id" content="{{ .Site.Params.facebookAppId }}">
+<meta property="fb:admins" content="{{ .Site.Params.facebookAdminId }}">
+
+{{/* Image if configured */}}
+{{- with .Params.image }}
+    <meta itemprop="image" content="{{ . | absURL }}">
+    <meta property="og:image" content="{{ . | absURL }}">
+    <meta name="twitter:image" content="{{ . | absURL }}">
+    <meta name="twitter:image:src" content="{{ . | absURL }}">
+{{- else }}
+    <meta itemprop="image" content="{{ .Site.Params.socialImage | absURL }}">
+    <meta property="og:image" content="{{ .Site.Params.socialImage | absURL }}">
+    <meta name="twitter:image" content="{{ .Site.Params.socialImage | absURL }}">
+    <meta name="twitter:image:src" content="{{ .Site.Params.socialImage | absURL }}">
+{{- end }}
+
+{{- if eq .Section "posts" -}}
+
+    {{/* Article OG data */}}
+    <meta property="og:type" content="article">
+    <meta property="article:publisher" content="{{ .Site.Params.facebook }}">
+    <meta property="og:article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }}>
+    <meta property="article:published_time" content={{ .Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }}>
+
+    {{/* Pagination meta tags for list pages only */}}
+    {{- $paginator := .Paginate (where .Pages "Section" "posts") -}}
+    {{- if $paginator -}}
+        <link rel="first" href="{{ $paginator.First.URL }}">
+        <link rel="last" href="{{ $paginator.Last.URL }}">
+
+        {{- if $paginator.HasPrev -}}
+            <link rel="prev" href="{{ $paginator.Prev.URL }}">
+        {{- end -}}
+
+        {{- if $paginator.HasNext -}}
+            <link rel="next" href="{{ $paginator.Next.URL }}">
+        {{- end -}}
+    {{- end -}}
+{{- else -}}
+    <meta property="og:type" content="website">
+{{- end -}}
+
+{{/* Author if configured */}}
+{{- with.Params.author -}}
+    <meta property="og:article:author" content="{{ humanize . }}">
+    <meta property="article:author" content="{{ humanize . }}">
+    <meta name="author" content="{{ humanize . }}">
+{{- end -}}
+
+{{/* Date tags */}}
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }}>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2b5797">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">

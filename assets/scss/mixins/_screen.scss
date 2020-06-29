@@ -1,0 +1,76 @@
+$_breakpoints: (
+                   'sm': 640px,
+                   'md': 768px,
+                   'lg': 1024px,
+                   'xl': 1280px
+               );
+
+$_min:         (
+                   'sm': map_get($_breakpoints, 'sm'),
+                   'md': map_get($_breakpoints, 'md'),
+                   'lg': map_get($_breakpoints, 'lg'),
+                   'xl': map_get($_breakpoints, 'xl'),
+               );
+
+$_max:         (
+                   'sm': map_get($_breakpoints, 'md') - 1px,
+                   'md': map_get($_breakpoints, 'lg') - 1px,
+                   'lg': map_get($_breakpoints, 'xl') - 1px,
+               );
+
+@mixin media($args...) {
+  $query: '';
+
+  @each $arg in $args {
+    @if $arg != null {
+      $op:    '';
+
+      @if ($query != '') {
+        $op: ' and ';
+      }
+
+      $query: $query + $op + '(#{$arg})';
+    }
+  }
+
+  @media screen and #{$query} {
+    @content;
+  }
+}
+
+@mixin screen($min, $max: null) {
+  $minWidth: 'min-width: #{map_get($_min, $min)}';
+  $maxWidth: null;
+
+  @if $max {
+    $maxWidth: 'max-width: #{map_get($_max, $max)}';
+  }
+
+  @include media($minWidth, $maxWidth) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @include screen('sm') {
+    @content;
+  }
+}
+
+@mixin md {
+  @include screen('md') {
+    @content;
+  }
+}
+
+@mixin lg {
+  @include screen('lg') {
+    @content;
+  }
+}
+
+@mixin xl {
+  @include screen('xl') {
+    @content;
+  }
+}

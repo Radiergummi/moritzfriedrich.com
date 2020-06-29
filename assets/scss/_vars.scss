@@ -1,0 +1,22 @@
+$white:       #ffffff;
+$black:       #111111;
+$dark-grey:   #39424e;
+$font:        'Didact Gothic', sans serif;
+$body-size:   16px;
+$body-text:   $white;
+
+$links:       darken($white, 20%);
+$links-hover: $white;
+
+$code-block:  #000004;
+
+:root {
+  --color-white:          255, 255, 255;
+  --color-black:          17, 17, 17;
+  --color-gray-dark:      57, 66, 78;
+
+  --color-text:           var(--color-white);
+
+  --font-family-headings: 'Didact Gothic', sans-serif;
+  --font-family-copy:     'Didact Gothic', sans-serif;
+}

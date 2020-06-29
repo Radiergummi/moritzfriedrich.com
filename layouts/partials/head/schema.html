@@ -1,0 +1,49 @@
+{{- $logo := resources.Get "img/logo.png" -}}
+
+{{- if eq .Section "posts" -}}
+    <script defer type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ .Title }}",
+    "description": "{{ .Summary | plainify | safeHTML }}",
+    "image": {{ .Params.featuredImage | absURL }},
+    "datePublished": {{ .PublishDate }},
+    "dateModified": {{ .Lastmod }},
+    "wordCount": "{{ .WordCount }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author }}"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ .Site.BaseURL }}
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author }}"
+    },
+    "keywords": [
+        {{- range $i, $e := .Params.tags }}
+        {{ if $i }} {{ end }}{{ $e }}
+        {{ end -}}
+    ]
+}
+    </script>
+{{- else -}}
+    <script defer type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": {{ .Permalink }},
+    "name": "{{ .Title }}",
+    "logo": {{ $logo.Permalink }},
+    "sameAs": [
+        "https://www.instagram.com/{{ .Site.Params.instagramPage }}",
+        "https://twitter.com/{{ .Site.Params.twitterPage }}",
+        "https://github.com/{{ .Site.Params.githubPage }}"
+    ]
+}
+    </script>
+{{- end -}}
+

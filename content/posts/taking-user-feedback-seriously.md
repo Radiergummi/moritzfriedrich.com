@@ -37,23 +37,23 @@ five-star rating field you know from online shops. The meta-data, like user and 
 gathered in the background.  
 
 ```
- ┌──────────────────────────────────────────────────────────┐
- │   email address                    your optional rating  │
- │ ┌───────────────────────────────┐                        │
- │ │ prefilled@user-name.tld       │  ★★★☆☆              │
- │ └───────────────────────────────┘                        │
- │                                                          │
- │   how can we help?                                       │
- │ ┌──────────────────────────────────────────────────────┐ │
- │ │                                                      │ │
- │ │                                                      │ │
- │ │                                                      │ │
- │ │                                                      │ │
- │ └──────────────────────────────────────────────────────┘ │
- │ ┏━━━━━━━━━━┓                                             │
- │ ┃  Submit  ┃                            p͟r͟i͟v͟a͟c͟y͟ ͟p͟o͟l͟i͟c͟y   │
- │ ┗━━━━━━━━━━┛                                             │
- └──────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│   email address                    your optional rating  │
+│ ┌───────────────────────────────┐                        │
+│ │ prefilled@user-name.tld       │  ★★★☆☆              │
+│ └───────────────────────────────┘                        │
+│                                                          │
+│   how can we help?                                       │
+│ ┌──────────────────────────────────────────────────────┐ │
+│ │                                                      │ │
+│ │                                                      │ │
+│ │                                                      │ │
+│ │                                                      │ │
+│ └──────────────────────────────────────────────────────┘ │
+│ ┏━━━━━━━━━━┓                                             │
+│ ┃  Submit  ┃                            p͟r͟i͟v͟a͟c͟y͟ ͟p͟o͟l͟i͟c͟y   │
+│ ┗━━━━━━━━━━┛                                             │
+└──────────────────────────────────────────────────────────┘
 ```
 
 As the user submits the message, it will be augmented with the application state and `POST`ed to the server. As the backend picks the message up, it again augments

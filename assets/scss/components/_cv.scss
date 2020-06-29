@@ -1,0 +1,36 @@
+.cv-item {
+  width: 100%;
+
+  & + .cv-item {
+    margin-top: 2rem;
+  }
+
+  .cv-item__header {
+    display:     flex;
+    align-items: center;
+    flex-wrap:   wrap;
+  }
+
+  .cv-item__position {
+    order:  1;
+    flex:   1 1 auto;
+    margin: 0;
+  }
+
+  .cv-item__time-range {
+    order: 2;
+    flex:  0 0 auto;
+  }
+
+  .cv-item__company {
+    order:   3;
+    flex:    1 1 100%;
+    margin:  0;
+    opacity: 0.9;
+  }
+
+  .cv-item__time-range {
+    display:     flex;
+    align-items: center;
+  }
+}

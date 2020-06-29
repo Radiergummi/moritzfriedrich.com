@@ -1,0 +1,20 @@
+<section class="cv-item">
+    <header class="cv-item__header">
+        <h3 class="cv-item__position">{{ .Params.position }}</h3>
+        <h4 class="cv-item__company">{{ .Params.company }}</h4>
+
+        {{ with .Get "from" }}
+            <span class="cv-item__time-range">
+                <span class="time-range__item time-range__item--start">{{ . }}</span>
+                {{ with $.Get "to" }}
+                    <span class="time-range__item time-range__item--separator">&hairsp;&ndash;&hairsp;</span>
+                    <span class="time-range__item time-range__item--end">{{ . }}</span>
+                {{ end }}
+            </span>
+        {{ end }}
+    </header>
+
+    <div class="cv-item__content">
+        <p>{{ .Inner | markdownify }}</p>
+    </div>
+</section>

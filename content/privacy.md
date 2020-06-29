@@ -5,13 +5,12 @@ draft: false
 ---
 
 ## Preface
-The following text is only available in German for now, since its required by law and I lack the resources to let a lawyer translate it to
-english. Therefore, I'll try my best to sum up all those paragraphs of useless text in english below.
+The following text is only available in German for now, since its required by law around here, and I lack the resources to let a lawyer translate it to
+english. Therefore, I've tried my best to sum up all those useless paragraphs in simple english below.
 
 ### Summary
 I use Cloudflare to improve performance and GitHub Pages to host the site. In fact, it's all openly available here: 
-[github.com/Radiergummi/moritzfriedrich.com](https://github.com/moritzfriedrich.com). There are no moving parts, and I promise to not doing
-something nefarious. If you spot something anyway, please use the email address below and let me know.
+[github.com/Radiergummi/moritzfriedrich.com](https://github.com/moritzfriedrich.com). There are no moving parts, and I promise to not do nefarious things. If you spot something anyway, please use the email address below and tell me.
 
 ### Name und Anschrift des Verantwortlichen
 Der Verantwortliche im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze der Mitgliedsstaaten sowie sonstiger 
