@@ -3,7 +3,9 @@ title: "Simple Cronjobs for CLI apps using systemd"
 date: 2020-01-16T13:29:13+01:00
 showDate: true
 draft: false
-tags: ["blog","story"]
+tags: 
+    - blog
+    - story
 ---
 
 Most applications will need some kind of asynchronous processing happening in the background: Calculating statistics, sending emails or processing large files. These tasks are probably abstracted into some kind of _job queue_, ready to be fetched by a worker.  

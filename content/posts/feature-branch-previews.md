@@ -4,7 +4,9 @@ slug: "feature-branch-previews"
 date: 2020-03-14T13:12:20+01:00
 showDate: true
 draft: false
-tags: ["blog","story"]
+tags: 
+    - blog
+    - story
 ---
 Automatically deployed feature branch previews
 ==============================================

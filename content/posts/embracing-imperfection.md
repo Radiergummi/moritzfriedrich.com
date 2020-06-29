@@ -3,7 +3,9 @@ title: Embracing Imperfection
 date: 2020-01-28T10:54:09+01:00
 showDate: true
 draft: false
-tags: ["blog","story"]
+tags: 
+    - blog
+    - story
 ---
 Ah, source code. Usually, and especially if written by someone else, [it's awful](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/). If you suffer from even a slight proclivity to perfectionism, you will inevitably try to refactor it. While doing so, you will equally inevitably realize there's even bigger fruits to reap a little further up, and before you know it you're rewriting the entire application. Now, the younger me might have said, "obviously that was necessary!", utterly ignoring the fact that the end result performs equally well at best, with a ridiculous amount of time having been wasted on playing a zero-sum game.  
 

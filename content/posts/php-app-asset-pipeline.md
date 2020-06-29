@@ -4,7 +4,9 @@ slug: "php-app-asset-pipeline"
 date: 2020-04-27T09:58:20+02:00
 showDate: true
 draft: true
-tags: ["blog","story"]
+tags: 
+    - blog
+    - story
 ---
 Flexible Asset Pipeline for traditional PHP web apps
 ====================================================
