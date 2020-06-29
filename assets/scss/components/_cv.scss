@@ -1,8 +1,9 @@
 .cv-item {
-  width: 100%;
+  width:      100%;
+  margin-top: 2rem;
 
-  & + .cv-item {
-    margin-top: 2rem;
+  & + .heading {
+    margin-top: 4rem;
   }
 
   .cv-item__header {
@@ -12,9 +13,10 @@
   }
 
   .cv-item__position {
-    order:  1;
-    flex:   1 1 auto;
-    margin: 0;
+    order:      1;
+    flex:       1 1 auto;
+    margin:     0;
+    text-align: left;
   }
 
   .cv-item__time-range {

@@ -31,7 +31,7 @@ Education
 {{<cv_item position="Abitur" company="Siebold-Gymnasium Würzburg" from="Jun 2012">}}
 {{</cv_item>}}
 
-Open Source Engagement
+Open Source Commitment
 ----------------------
 In my spare time, I really enjoy working on open source projects, too. Coding, or solving problems in general, is 
 something I am deeply passionate about. I have catered to this need over the years by contributing to lots of different
