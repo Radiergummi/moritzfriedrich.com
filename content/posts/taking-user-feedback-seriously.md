@@ -4,7 +4,7 @@ slug: "user-feedback"
 date: 2020-06-20T12:03:35+02:00
 showDate: true
 draft: false
-tags: ["blog", "story"]
+tags: ["blog","story"]
 ---
 
 Recently, I got annoyed with the way we handle support in some cases. Users write emails or send messages via instant messaging apps, which end up in some ticket
