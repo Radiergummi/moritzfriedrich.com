@@ -16,9 +16,12 @@
 }
 
 .home__link {
-  font-family:   var(--font-family-headings);
-  font-size:     3rem;
-  font-weight:   300;
-  margin-bottom: 2rem;
-  line-height:   1.5em;
+  font-family: var(--font-family-headings);
+  font-size:   3rem;
+  font-weight: 300;
+  line-height: 1.5em;
+
+  & + .home__link {
+    margin-top: 2rem;
+  }
 }

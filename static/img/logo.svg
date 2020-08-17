@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46666"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (f8dce91, 2019-08-02)"
+   sodipodi:docname="fritz-favicon-base.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="162.46759"
+     inkscape:cy="242.89129"
+     inkscape:document-units="mm"
+     inkscape:current-layer="flowRoot33"
+     showgrid="false"
+     units="px"
+     inkscape:pagecheckerboard="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1050"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Blob"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-161.53336)">
+    <g
+       id="g12"
+       transform="matrix(0.30407153,0,0,0.30407145,79.357848,238.10017)">
+      <path
+         id="path10"
+         d="m 128.8,-118.4 c 32.3,56.3 48.8,109.5 40.8,162.3 -7.9,52.9 -40.1,105.4 -87.4,129.1 -47.3,23.7 -109.7,18.6 -172.2,-4.5 -62.5,-23 -125.2,-64.1 -148,-125.3 -22.8,-61.2 -5.8,-142.6 40.5,-202 46.3,-59.4 121.9,-96.8 183.8,-85.9 61.9,10.9 110.1,70.1 142.5,126.3 z"
+         inkscape:connector-curvature="0"
+         style="fill:#39424e" />
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot24"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,0,161.53336)"><flowRegion
+         id="flowRegion26"><rect
+           id="rect28"
+           width="397.14285"
+           height="432.14285"
+           x="162.85715"
+           y="127" /></flowRegion><flowPara
+         id="flowPara30"
+         style="font-size:400px">FF</flowPara></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Label">
+    <g
+       aria-label="F"
+       transform="matrix(0.26261116,-0.03224459,0.03224459,0.26261116,-16.390813,5.0794874)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot33">
+      <path
+         d="m 366.70117,313.82422 h -9.17969 q -3.51562,-22.85156 -10.54687,-30.27344 -7.22656,-7.42187 -26.95313,-8.00781 l -6.44531,-0.19531 h -58.00781 v 87.30468 q 0,20.3125 5.66406,27.14844 5.85938,6.83594 25,8.39844 2.53906,0.19531 5.66406,0.39062 v 7.61719 H 179.98242 v -7.61719 q 20.70313,-1.36718 27.14844,-6.83593 6.64062,-5.85938 7.42187,-24.02344 0.19532,-4.10156 0.19532,-9.57031 V 184.91797 q 0,-20.11719 -5.66407,-26.95313 -5.85937,-6.64062 -25,-8.59375 -1.95312,-0.19531 -4.10156,-0.39062 v -7.61719 h 212.30469 l 1.17187,57.22656 h -9.96093 q -4.49219,-23.4375 -12.30469,-31.44531 -8.59375,-8.59375 -31.05469,-10.15625 -7.03125,-0.39062 -17.38281,-0.39062 h -54.49219 q -9.375,0 -11.32812,3.90625 l -1.17188,4.10156 q -0.19531,2.14844 -0.19531,5.66406 v 88.67188 h 58.00781 q 22.85156,0 30.85938,-6.05469 8.39843,-6.05469 12.10937,-25.58594 0.39063,-2.92969 0.97656,-6.25 h 9.17969 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:400px;font-family:Likhan;-inkscape-font-specification:Likhan;text-align:center;text-anchor:middle;fill:#ffffff"
+         id="path18" />
+    </g>
+  </g>
+</svg>
