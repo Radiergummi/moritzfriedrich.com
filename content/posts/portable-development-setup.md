@@ -1,6 +1,7 @@
 ---
 title: "Portable Development Setup"
 date: 2020-08-23T09:52:08Z
+showDate: true
 draft: false
 tags: 
     - blog
