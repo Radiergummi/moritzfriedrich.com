@@ -1,4 +1,14 @@
 {
+  "name": "@radiergummi/moritzfriedrich.com",
+  "author": {
+    "name": "Moritz Friedrich",
+    "email": "m@9dev.de",
+    "url": "https://www.moritzfriedrihc.com"
+  },
+  "repository": {
+    "url": "https://github.com/Radiergummi/moritzfriedrich.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.7.3",
     "postcss-cli": "^7.1.0"
