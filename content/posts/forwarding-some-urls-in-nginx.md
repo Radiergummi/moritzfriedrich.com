@@ -1,5 +1,6 @@
 ---
-title: "Forwarding Some URLs in Nginx"
+title: "Partial migration to Webflow"
+slug: "forwarding-some-urls-in-nginx"
 date: 2021-04-19T12:53:41+02:00
 showDate: true
 draft: false
@@ -10,7 +11,7 @@ aggregation pages and public profiles we're not immediately ready to move to the
 application server, receive serious traffic (40k views per day), and cannot be replicated in Webflow, our new website provider.  
 Unfortunately, those pages are all placed on the root domain (`matchory.com/offending-pages`), and by "lots", I meant several hundreds of them. This means we
 can't simply add redirects in Webflow, but have to keep pointing the DNS for `matchory.com` to our own web servers. There, we take it the other way around and
-redirect the traffic for all non-SEO pages to Webflow. But how ([TL;DR](#full-nginx-config))?
+redirect the traffic for all non-SEO pages to Webflow. But how ([TL;DR: jump to the final config](#full-nginx-config))?
 
 -----
 
