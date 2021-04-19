@@ -2,7 +2,7 @@
 title: "Forwarding Some URLs in Nginx"
 date: 2021-04-19T12:53:41+02:00
 showDate: true
-draft: true
+draft: false
 tags: ["blog","story", "nginx", "devops"]
 ---
 Today we faced an interesting problem with the deployment of our new website to [Webflow](https://webflow.com/). Currently, we have lots of SEO-relevant
