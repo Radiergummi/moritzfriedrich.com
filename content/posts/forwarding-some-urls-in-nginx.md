@@ -1,6 +1,9 @@
 ---
 title: "Forwarding Some URLs in Nginx"
-date: 2021-04-19T12:53:41+02:00 showDate: true draft: true tags: ["blog","story", "nginx", "devops"]
+date: 2021-04-19T12:53:41+02:00
+showDate: true
+draft: true
+tags: ["blog","story", "nginx", "devops"]
 ---
 Today we faced an interesting problem with the deployment of our new website to [Webflow](https://webflow.com/). Currently, we have lots of SEO-relevant
 aggregation pages and public profiles we're not immediately ready to move to the new application. These pages are automatically generated from our old
