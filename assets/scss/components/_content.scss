@@ -89,15 +89,17 @@
   }
 
   & blockquote {
-    background-color: RGBA(var(--color-white), 0.4);
-    color:            RGB(var(--color-gray-dark));
+    background-color: RGBA(var(--color-white), 0.1);
+    border-left:      0.5rem solid RGBA(var(--color-white), 0.4);
     padding:          2rem;
-    margin:           2rem 1rem 2rem 1rem;
+    margin:           2rem 0;
     border-radius:    3px;
+    box-shadow: 0 5px 35px RGBA(var(--color-black), 0.05);
 
     a {
       color: RGB(var(--color-black));
     }
+
   }
 
   & ul {
